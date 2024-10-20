@@ -32,7 +32,9 @@ const Search = () => {
         type="text"
         placeholder="Search entiere store here..."
         className={`absolute top-1/2 -translate-y-1/2  w-[1126px] z-[-1] px-[30px] py-5 rounded-[31px] text-sm placeholder:text-[#A2A6B0] text-black outline-none bg-[#F5F7FF] transition-all duration-500 ${
-          showSearchBar ? "translate-x-[-105%] visible opacity-100" : "left-full invisible opacity-0"
+          showSearchBar
+            ? "translate-x-[-105%] visible opacity-100"
+            : "left-full invisible opacity-0"
         }`}
       />
       <div className="res lg:hidden block relative">
@@ -122,7 +124,7 @@ const Navbar = () => {
         <div className="main flex items-center">
           <Logo className="hidden lg:block mr-[30px]" />
           <ul
-            className={`lg:static absolute top-0 bg-white lg:bg-transparent lg:h-auto  h-dvh lg:flex lg:flex-row flex-col items-center gap-[25px] w-[300px] md:w-[436px] lg:w-auto duration-500 ${
+            className={`lg:static absolute top-0 bg-white lg:bg-transparent lg:h-auto  h-dvh lg:flex lg:flex-row flex-col items-center gap-[25px] lg:gap-0 w-[300px] md:w-[436px] lg:w-auto duration-500 z-30 lg:z-10 ${
               showMenu
                 ? "opacity-100 visible left-0"
                 : "opacity-0 invisible left-[-100%]"
@@ -141,10 +143,13 @@ const Navbar = () => {
             {navbarListItem.map((item, index) => (
               <li
                 key={index}
-                className="flex items-center justify-between lg:px-0 px-6  duration-300 hover:bg-[#F5F7FF] lg:hover:bg-transparent"
+                className="lg:px-0 px-6  duration-300 hover:bg-[#F5F7FF] lg:hover:bg-transparent"
               >
-                <Link className="navbarListItem">{item}</Link>
-                <FaAngleDown className="block lg:hidden -rotate-90" />
+                <span className="flex items-center justify-between w-full">
+                  <Link className="navbarListItem">{item}</Link>
+                  <FaAngleDown className="block lg:hidden -rotate-90" />
+                </span>
+                {/* mega menu left */}
               </li>
             ))}
             <Button className="lg:px-[26px] px-[50px] relative z-40 lg:m-0 mt-6 ml-6">
@@ -157,7 +162,7 @@ const Navbar = () => {
           >
             <IoMenu />
           </button>
-          <div className="cart&search ml-auto flex items-center md:gap-[25px] gap-4 relative z-50">
+          <div className="cart&search ml-auto flex items-center md:gap-[25px] gap-4 relative z-20 lg:z-30">
             <Search />
             <Cart />
             <User />

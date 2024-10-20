@@ -1,7 +1,7 @@
 import React from "react";
-import Tablet from "../../public/Common Images/Tablet-logo.png";
-import Desktop from "../../public/Common Images/Desktop-logo.png";
-import Mobile from "../../public/Common Images/Mobile-logo.png";
+import Tablet from "/Common Images/Tablet-logo.png";
+import Desktop from "/Common Images/Desktop-logo.png";
+import Mobile from "/Common Images/Mobile-logo.png";
 
 const Logo = ({ className }) => {
   return (
