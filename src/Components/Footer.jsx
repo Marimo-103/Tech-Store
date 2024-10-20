@@ -3,6 +3,13 @@ import Container from "./Container";
 import Button from "../Layers/Button";
 import { Link } from "react-router-dom";
 import { BiSolidChevronDown } from "react-icons/bi";
+import { IoLogoFacebook } from "react-icons/io";
+import { PiInstagramLogoFill } from "react-icons/pi";
+import card_1 from "../../public/Common Images/paypal.png";
+import card_2 from "../../public/Common Images/visa.png";
+import card_3 from "../../public/Common Images/maestro.png";
+import card_4 from "../../public/Common Images/discover.png";
+import card_5 from "../../public/Common Images/american-express.png";
 
 const Footer = () => {
   const information = [
@@ -100,7 +107,7 @@ const Footer = () => {
             </Button>
           </div>
         </div>
-        <div className="body flex lg:flex-row flex-col gap-y-4 items-start lg:gap-x-[78px] lg:mt-[45px] lg:mb-9 my-[15px]">
+        <div className="body flex lg:flex-row flex-col gap-y-4 items-start lg:gap-x-[78px] lg:mt-[45px] lg:mb-9 my-[15px] lg:w-auto w-[94%] mx-auto">
           <ul className="lg:w-auto w-full">
             <h4
               onClick={() => setInfoDDM(!infoDDM)}
@@ -218,6 +225,32 @@ const Footer = () => {
               </li>
             </span>
           </ul>
+        </div>
+        <div className="icons flex items-center justify-between relative mb-10">
+          <div className="socials flex items-center gap-1 text-xl text-[#ffffff80]">
+            <IoLogoFacebook />
+            <PiInstagramLogoFill />
+          </div>
+          <div className="cards flex items-center gap-[10px] absolute md:top-1/2 top-full left-1/2 -translate-x-1/2 md:-translate-y-1/2 translate-y-[15px] ">
+            <div className="img w-[34.071px] h-[21.957px]">
+              <img src={card_1} alt="" className="h-full w-full" />
+            </div>
+            <div className="img w-[34.071px] h-[21.957px]">
+              <img src={card_2} alt="" className="h-full w-full" />
+            </div>
+            <div className="img w-[34.071px] h-[21.957px]">
+              <img src={card_3} alt="" className="h-full w-full" />
+            </div>
+            <div className="img w-[34.071px] h-[21.957px]">
+              <img src={card_4} alt="" className="h-full w-full" />
+            </div>
+            <div className="img w-[34.071px] h-[21.957px]">
+              <img src={card_5} alt="" className="h-full w-full" />
+            </div>
+          </div>
+          <div className="text-xs text-[#ffffff99] font-medium leading-[132.5%]">
+          Copyright © 2020 Shop Pty. Ltd.
+          </div>
         </div>
       </Container>
     </div>
