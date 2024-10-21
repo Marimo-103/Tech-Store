@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { BiSolidChevronDown } from "react-icons/bi";
 import { IoLogoFacebook } from "react-icons/io";
 import { PiInstagramLogoFill } from "react-icons/pi";
-import card_1 from "../../public/Common Images/paypal.png";
-import card_2 from "../../public/Common Images/visa.png";
-import card_3 from "../../public/Common Images/maestro.png";
-import card_4 from "../../public/Common Images/discover.png";
-import card_5 from "../../public/Common Images/american-express.png";
+import card_1 from "/Common Images/paypal.png";
+import card_2 from "/Common Images/visa.png";
+import card_3 from "/Common Images/maestro.png";
+import card_4 from "/Common Images/discover.png";
+import card_5 from "/Common Images/american-express.png";
 
 const Footer = () => {
   const information = [
@@ -85,7 +85,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="bg-[#020203] lg:py-[47px] py-[35px]">
+    <div className="bg-[#020203] lg:pt-[47px] py-[35px]">
       <Container>
         <div className="header flex md:flex-row flex-col gap-y-4 items-center justify-between">
           <div className="left">
@@ -116,7 +116,7 @@ const Footer = () => {
               Information
               <BiSolidChevronDown
                 className={`lg:hidden block ${
-                  infoDDM ? "rotate-0" : "rotate-180"
+                  infoDDM ? "rotate-180" : "rotate-0"
                 }`}
               />
             </h4>
@@ -138,7 +138,7 @@ const Footer = () => {
               PC Parts
               <BiSolidChevronDown
                 className={`lg:hidden block ${
-                  pcPartsDDM ? "rotate-0" : "rotate-180"
+                  pcPartsDDM ? "rotate-180" : "rotate-0"
                 }`}
               />
             </h4>
@@ -160,7 +160,7 @@ const Footer = () => {
               Desktop PCs
               <BiSolidChevronDown
                 className={`lg:hidden block ${
-                  desktopPCsDDM ? "rotate-0" : "rotate-180"
+                  desktopPCsDDM ? "rotate-180" : "rotate-0"
                 }`}
               />
             </h4>
@@ -182,7 +182,7 @@ const Footer = () => {
               Laptops
               <BiSolidChevronDown
                 className={`lg:hidden block ${
-                  laptopsDDM ? "rotate-0" : "rotate-180"
+                  laptopsDDM ? "rotate-180" : "rotate-0"
                 }`}
               />
             </h4>
@@ -204,7 +204,7 @@ const Footer = () => {
               Address
               <BiSolidChevronDown
                 className={`lg:hidden block ${
-                  adressDDM ? "rotate-0" : "rotate-180"
+                  adressDDM ? "rotate-180" : "rotate-0"
                 }`}
               />
             </h4>
@@ -226,7 +226,7 @@ const Footer = () => {
             </span>
           </ul>
         </div>
-        <div className="icons flex items-center justify-between relative mb-10">
+        <div className="icons flex items-center justify-between relative mb-10 lg:m-0">
           <div className="socials flex items-center gap-1 text-xl text-[#ffffff80]">
             <IoLogoFacebook />
             <PiInstagramLogoFill />

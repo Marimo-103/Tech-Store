@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <section id="intro" className="">
-        <Container>
+        <Container className=''>
           <IntroBanner />
         </Container>
       </section>

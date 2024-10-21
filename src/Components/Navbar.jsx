@@ -31,10 +31,10 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search entiere store here..."
-        className={`absolute top-1/2 -translate-y-1/2  w-[1126px] z-[-1] px-[30px] py-5 rounded-[31px] text-sm placeholder:text-[#A2A6B0] text-black outline-none bg-[#F5F7FF] transition-all duration-500 ${
+        className={`absolute top-1/2 -translate-y-1/2  z-[-1] px-[30px] py-5 rounded-[31px] text-sm placeholder:text-[#A2A6B0] text-black outline-none bg-[#F5F7FF] transition-all duration-500 ${
           showSearchBar
-            ? "translate-x-[-105%] visible opacity-100"
-            : "left-full invisible opacity-0"
+            ? "translate-x-[-105%] visible opacity-100 w-[1126px]"
+            : "left-full invisible opacity-0 w-0"
         }`}
       />
       <div className="res lg:hidden block relative">
@@ -85,9 +85,28 @@ const Cart = () => {
 };
 
 const User = () => {
+  let [show, setShow] = useState(false);
+
   return (
-    <div className="h-9 w-9 rounded-full border-2 lg:border-[#0156FF] border-white flex items-center justify-center cursor-pointer lg:ml-[11px]">
-      <FaRegUser className="lg:text-[#0156FF] text-white text-xl" />
+    <div className="h-9 w-9 rounded-full border-2 lg:border-[#0156FF] border-white flex items-center justify-center  lg:ml-[11px]">
+      <FaRegUser
+        onClick={() => setShow(!show)}
+        className="lg:text-[#0156FF] text-white text-xl cursor-pointer"
+      />
+      <div
+        className={`info md:text-sm text-xs text-black md:leading-[200%] leading-[240%] font-medium md:py-5 px-[26px] py-[19px] w-[232px] bg-[#ffffff] absolute top-full translate-y-[13px] right-[-10px] z-50 shadow-custom border border-[#CACDD8] duration-300 ${
+          show ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <div className="relative flex flex-col md:gap-[6px]">
+          <div class="inline-block w-0 h-0 border-solid border-t-0 border-r-[14.5px] border-l-[14.5px] border-b-[19px] border-l-transparent border-r-transparent border-t-transparent border-b-[#ffffff] absolute top-[-36px] right-[-14px]"></div>
+          <p className="cursor-pointer">My Account</p>
+          <p className="cursor-pointer">My Wish List (0)</p>
+          <p className="cursor-pointer">Compare (0)</p>
+          <p className="cursor-pointer">Create an Account</p>
+          <p className="cursor-pointer">Sign In</p>
+        </div>
+      </div>
     </div>
   );
 };
@@ -120,7 +139,7 @@ const Navbar = () => {
   return (
     <div className="bg-[#0156FF] lg:bg-transparent">
       <Header />
-      <Container className="lg:py-3 py-[13px] overflow-hidden">
+      <Container className="lg:py-3 py-[13px]">
         <div className="main flex items-center">
           <Logo className="hidden lg:block mr-[30px]" />
           <ul

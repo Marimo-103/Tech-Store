@@ -10,7 +10,11 @@ export default {
       'Poppins': ['Poppins', 'serif'],
     },
 
-    extend: {},
+    extend: {
+      boxShadow: {
+        'custom': '0px 5px 15px 0px rgba(0, 0, 0, 0.14)',
+      }
+    },
 
   },
   plugins: [],

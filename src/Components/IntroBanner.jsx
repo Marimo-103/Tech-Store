@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import Desktop_banner from "../../public/Common Images/Desktop-Banner.png";
-import Tablet_banner from "../../public/Common Images/Tablet-Banner.png";
-import Mobile_banner from "../../public/Common Images/Mobile-Banner.png";
+import Desktop_banner from "/Common Images/Desktop-Banner.png";
+import Tablet_banner from "/Common Images/Tablet-Banner.png";
+import Mobile_banner from "/Common Images/Mobile-Banner.png";
 import { FaChevronUp } from "react-icons/fa";
 
 function SampleNextArrow(props) {
@@ -55,11 +55,11 @@ const IntroBanner = () => {
     prevArrow: <SamplePrevArrow />,
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
   };
 
