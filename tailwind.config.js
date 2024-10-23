@@ -12,10 +12,12 @@ export default {
 
     extend: {
       boxShadow: {
-        'custom': '0px 5px 15px 0px rgba(0, 0, 0, 0.14)',
+        'custom': '0px 3px 15px 8px rgba(0, 0, 0, 0.20)',
       }
     },
 
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
