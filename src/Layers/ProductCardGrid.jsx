@@ -31,9 +31,9 @@ const Tags = ({ className }) => {
   );
 };
 
-const ProductCardGrid = ({ src, ProductTitle, price, DiscountPrice }) => {
+const ProductCardGrid = ({ src, ProductTitle, price, DiscountPrice, className }) => {
   return (
-    <div className="w-[174px] md:w-[234px] px-[13.5px] md:px-[25px] pt-[26px] bg-[#fff] border border-white cursor-pointer duration-300 hover:shadow-custom relative group overflow-hidden lg:mx-6 md:mx-1 mx-[9px]">
+    <div className={`w-[174px] md:w-[234px] px-[13.5px] md:px-[25px] pt-[26px] bg-[#fff] cursor-pointer duration-300 lg:hover:shadow-custom relative group overflow-hidden ${className}`}>
       <div className="image w-[100px] h-[100px] md:w-[150px] md:h-[150px] mx-auto">
         <Image src={src} className="!w-full !h-full object-contain" />
       </div>
