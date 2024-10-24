@@ -6,7 +6,6 @@ import ProductCardGrid from "../Layers/ProductCardGrid";
 import p01 from "/Products Images/Product-1.png";
 import NewArrivals from "../Components/NewArrivals";
 
-
 const Home = () => {
   return (
     <div>
@@ -31,8 +30,10 @@ const Home = () => {
               See All New Products
             </Link>
           </div>
+        </Container>
+        <Container>
           <div className="slider">
-            <NewArrivals />
+            <NewArrivals className='w-full'/>
           </div>
         </Container>
       </section>

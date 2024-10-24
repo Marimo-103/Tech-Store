@@ -47,7 +47,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const NewArrivals = () => {
+const NewArrivals = ({className}) => {
   var settings = {
     dots: false,
     arrows: true,
@@ -55,7 +55,7 @@ const NewArrivals = () => {
     prevArrow: <SamplePrevArrow />,
     infinite: false,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -82,7 +82,7 @@ const NewArrivals = () => {
   };
 
   return (
-    <div className="slider-container mx-auto">
+    <div className={`slider-container w-full ${className}`}>
       <Slider {...settings}>
         <div className="py-[14px] mx-auto">
           <ProductCardGrid

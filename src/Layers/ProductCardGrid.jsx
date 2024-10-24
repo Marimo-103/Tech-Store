@@ -2,8 +2,8 @@ import React from "react";
 import { Image } from "antd";
 import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
 import { TiTick } from "react-icons/ti";
-import favIcon01 from '../../public/Products Images/Fav.png'
-import favIcon02 from '../../public/Products Images/Fav1.png'
+import favIcon01 from '/Products Images/Fav.png'
+import favIcon02 from '/Products Images/Fav1.png'
 
 const InStock = ({ className }) => {
   return (
@@ -33,7 +33,7 @@ const Tags = ({ className }) => {
 
 const ProductCardGrid = ({ src, ProductTitle, price, DiscountPrice }) => {
   return (
-    <div className="w-[174px] md:w-[234px] px-[13.5px] md:px-[25px] pt-[26px] bg-[#fff] border border-white cursor-pointer duration-300 hover:shadow-custom relative group overflow-hidden">
+    <div className="w-[174px] md:w-[234px] px-[13.5px] md:px-[25px] pt-[26px] bg-[#fff] border border-white cursor-pointer duration-300 hover:shadow-custom relative group overflow-hidden lg:mx-6 md:mx-1 mx-[9px]">
       <div className="image w-[100px] h-[100px] md:w-[150px] md:h-[150px] mx-auto">
         <Image src={src} className="!w-full !h-full object-contain" />
       </div>
