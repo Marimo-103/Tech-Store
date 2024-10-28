@@ -41,6 +41,11 @@ import post07 from "/Common Images/post-7.png";
 import post08 from "/Common Images/post-8.png";
 import post09 from "/Common Images/post-9.png";
 import Card from "../Layers/Card";
+import ReviewSlider from "../Components/ReviewSlider";
+import Button from "../Layers/Button";
+import supp01 from "/Common Images/Support-1.png";
+import supp02 from "/Common Images/Support-2.png";
+import supp03 from "/Common Images/Support-3.png";
 
 const Home = () => {
   return (
@@ -224,7 +229,7 @@ const Home = () => {
       <section id="followOnIsnta" className="lg:block hidden pt-[42px]">
         <Container>
           <Title text="Follow us on Instagram for News, Offers & More" />
-          <div className="flex flex-wrap mt-5 gap-[9px]">
+          <div className="flex flex-wrap mt-5 gap-x-[9px] gap-y-5">
             <Card
               src={post01}
               comment="If you’ve recently made a desktop PC or laptop purchase, you might
@@ -315,6 +320,61 @@ const Home = () => {
               or your business workspace..."
               date="01.09.2020"
             />
+          </div>
+        </Container>
+      </section>
+
+      {/* review slider */}
+      <section id="review" className="lg:pt-[57px] pt-4">
+        <Container className="">
+          <div className="slider max-w-[1160px] mx-auto lg:px-[119px] lg:pt-[49px] lg:pb-[56px] md:pl-[42px] md:pt-[34px] md:pb-[29px] pr-[19px] pl-3 py-[26px] bg-[#F5F7FF] relative">
+            <ReviewSlider />
+            <Button className="px-[26px] absolute lg:bottom-[56px] lg:left-[119px] md:left-[42px] md:bottom-[27px] bottom-[29px] left-[12px]">
+              Leave Us A Review
+            </Button>
+          </div>
+          <div className="support max-w-[1160px] mx-auto lg:pt-[60px] lg:pb-11 md:py-[37.5px] py-[25px] lg:px-[53px] flex md:flex-row flex-col md:justify-between justify-center items-center gap-y-5">
+            <div className="child flex flex-col items-center gap-y-2 lg:w-[265px] md:w-[229px] w-[265px]">
+              <div className="img w-[45px] h-[46px] lg:w-[65px] lg:h-[65px]">
+                <img src={supp01} alt="" className="w-full h-full" />
+              </div>
+              <div className="text w-full text-center">
+                <h3 className="lg:text-lg text-sm text-black font-bold leading-[140%]">
+                  Product Support
+                </h3>
+                <p className="lg:text-sm text-xs text-[#000000b3] leading-[140%] lg:mt-[13px] mt-[5px]">
+                  Up to 3 years on-site warranty available for your peace of
+                  mind.
+                </p>
+              </div>
+            </div>
+            <div className="child flex flex-col items-center gap-y-2 lg:w-[265px] md:w-[229px] w-[265px]">
+              <div className="img w-[45px] h-[46px] lg:w-[65px] lg:h-[65px]">
+                <img src={supp02} alt="" className="w-full h-full" />
+              </div>
+              <div className="text w-full text-center">
+                <h3 className="lg:text-lg text-sm text-black font-bold leading-[140%]">
+                  Personal Account
+                </h3>
+                <p className="lg:text-sm text-xs text-[#000000b3] leading-[140%] lg:mt-[13px] mt-[5px]">
+                  With big discounts, free delivery and a dedicated support
+                  specialist.
+                </p>
+              </div>
+            </div>
+            <div className="child flex flex-col items-center gap-y-2 lg:w-[265px] md:w-[229px] w-[265px]">
+              <div className="img w-[45px] h-[46px] lg:w-[65px] lg:h-[65px]">
+                <img src={supp03} alt="" className="w-full h-full" />
+              </div>
+              <div className="text w-full text-center">
+                <h3 className="lg:text-lg text-sm text-black font-bold leading-[140%]">
+                  Amazing Savings
+                </h3>
+                <p className="lg:text-sm text-xs text-[#000000b3] leading-[140%] lg:mt-[13px] mt-[5px]">
+                  Up to 70% off new Products, you can be sure of the best price.
+                </p>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
