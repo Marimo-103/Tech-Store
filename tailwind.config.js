@@ -13,7 +13,10 @@ export default {
     extend: {
       boxShadow: {
         'custom': '0px 3px 15px 8px rgba(0, 0, 0, 0.20)',
-      }
+      },
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
     },
 
   },

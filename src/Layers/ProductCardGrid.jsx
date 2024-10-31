@@ -2,8 +2,10 @@ import React from "react";
 import { Image } from "antd";
 import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
 import { TiTick } from "react-icons/ti";
-import favIcon01 from '/Products Images/Fav.png'
-import favIcon02 from '/Products Images/Fav1.png'
+import favIcon01 from "/Products Images/Fav.png";
+import favIcon02 from "/Products Images/Fav1.png";
+import Button from "../Layers/Button";
+import { FiShoppingCart } from "react-icons/fi";
 
 const InStock = ({ className }) => {
   return (
@@ -31,9 +33,17 @@ const Tags = ({ className }) => {
   );
 };
 
-const ProductCardGrid = ({ src, ProductTitle, price, DiscountPrice, className }) => {
+const ProductCardGrid = ({
+  src,
+  ProductTitle,
+  price,
+  DiscountPrice,
+  className,
+}) => {
   return (
-    <div className={`w-[174px] md:w-[234px] px-[13.5px] md:px-[25px] pt-[26px] bg-[#fff] cursor-pointer duration-300 lg:hover:shadow-custom relative group overflow-hidden ${className}`}>
+    <div
+      className={`w-[174px] md:w-[234px] px-[13.5px] md:px-[25px] pt-[26px] bg-[#fff] cursor-pointer duration-300 lg:hover:shadow-custom relative group overflow-hidden ${className}`}
+    >
       <div className="image w-[100px] h-[100px] md:w-[150px] md:h-[150px] mx-auto">
         <Image src={src} className="!w-full !h-full object-contain" />
       </div>
@@ -62,6 +72,14 @@ const ProductCardGrid = ({ src, ProductTitle, price, DiscountPrice, className })
       </div>
       <InStock className="absolute top-0 -translate-y-full left-[25px] duration-300 group-hover:translate-y-0" />
       <Tags className="absolute top-4 right-0 translate-x-[110%] duration-300 group-hover:translate-x-[-12px]" />
+      <div className="max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out group-hover:max-h-20">
+      <Button className='lg:px-5 px-3 md:px-4 lg:mb-4'>
+        <FiShoppingCart className="inline-block mr-2"/>
+        <span>
+        Add to cart
+        </span>
+      </Button>
+      </div>
     </div>
   );
 };
