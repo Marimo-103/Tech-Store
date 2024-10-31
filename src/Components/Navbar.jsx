@@ -113,13 +113,13 @@ const User = () => {
 
 const Navbar = () => {
   let navbarListItem = [
-    "Laptops",
-    "Desktop PCs",
-    "Networking Devices",
-    "Printers & Scanners",
-    "PC Parts",
-    "All Other Products",
-    "Repairs",
+    { name: "Laptops", pathname: "/product/details" },
+    { name: "Desktop PCs", pathname: "/desktop-pcs" },
+    { name: "Networking Devices", pathname: "/networking-devices" },
+    { name: "Printers & Scanners", pathname: "/printers-scanners" },
+    { name: "PC Parts", pathname: "/pc-parts" },
+    { name: "All Other Products", pathname: "/all-other-products" },
+    { name: "Repairs", pathname: "/repairs" }
   ];
 
   let [showMenu, setShowMenu] = useState(false);
@@ -165,7 +165,7 @@ const Navbar = () => {
                 className="lg:px-0 px-6  duration-300 hover:bg-[#F5F7FF] lg:hover:bg-transparent"
               >
                 <span className="flex items-center justify-between w-full">
-                  <Link className="navbarListItem">{item}</Link>
+                  <Link to={item.pathname} className="navbarListItem">{item.name}</Link>
                   <FaAngleDown className="block lg:hidden -rotate-90" />
                 </span>
                 {/* mega menu left */}

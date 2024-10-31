@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import RootLayout from "./RootLayout";
 import Home from "./Pages/Home";
+import ProductInside from "./Pages/ProductInside";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/product/details" element={<ProductInside />} />
     </Route>
   )
 );
