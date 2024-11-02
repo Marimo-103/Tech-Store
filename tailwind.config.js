@@ -15,7 +15,10 @@ export default {
       },
       backgroundImage: {
         "custom-radial": "radial-gradient(50% 50% at 50% 50%, #242528 0%, #040404 100%)",
-        "customer-support": "url('/Common Images/HelpBanner.png')"
+        "customer-support": "url('/Common Images/HelpBanner.png')",
+        "i7D": "url('/Common Images/ProductDetailsBanner.png')",
+        "i7T": "url('/Common Images/ProductDetailsBannerTab.png')",
+        "i7M": "url('/Common Images/ProductDetailsBannerMob.png')",
 
       },
     },

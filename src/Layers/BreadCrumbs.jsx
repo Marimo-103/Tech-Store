@@ -1,49 +1,47 @@
-import React from 'react';
-import { Breadcrumb } from 'antd';
-import { Link } from 'react-router-dom';
-import { HomeOutlined, LaptopOutlined } from '@ant-design/icons';
+// import React from 'react';
+// import { Breadcrumb } from 'antd';
+// import { Link } from 'react-router-dom';
+// import { HomeOutlined, LaptopOutlined } from '@ant-design/icons';
 
-const BreadCrumbs = () => {
-  const pathnames = window.location.pathname.split('/').filter((x) => x);
+// const BreadCrumbs = () => {
+//   const pathnames = window.location.pathname.split('/').filter((x) => x);
 
-  const getBreadcrumbName = (pathname) => {
-    // Custom logic to convert path segments to meaningful names
-    if (pathname === 'laptops') return 'Laptops';
-    if (pathname === 'msi-gs-series') return 'MSI GS Series';
-    return pathname.charAt(0).toUpperCase() + pathname.slice(1);
-  };
+//   const getBreadcrumbName = (pathname) => {
+//     // Custom logic to convert path segments to meaningful names
+//     if (pathname === 'laptops') return 'Laptops';
+//     if (pathname === 'msi-gs-series') return 'MSI GS Series';
+//     return pathname.charAt(0).toUpperCase() + pathname.slice(1);
+//   };
 
-  return (
-    <Breadcrumb className="text-gray-600">
-      <Breadcrumb.Item>
-        <Link to="/">
-          <HomeOutlined />
-          <span className="ml-2">Home</span>
-        </Link>
-      </Breadcrumb.Item>
-      {pathnames.map((pathname, index) => {
-        const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-        const isLast = index === pathnames.length - 1;
-        return (
-          <Breadcrumb.Item key={index}>
-            {isLast ? (
-              <span>{getBreadcrumbName(pathname)}</span>
-            ) : (
-              <Link to={routeTo}>
-                <LaptopOutlined />
-                <span className="ml-2">{getBreadcrumbName(pathname)}</span>
-              </Link>
-            )}
-          </Breadcrumb.Item>
-        );
-      })}
-    </Breadcrumb>
-  );
-};
+//   return (
+//     <Breadcrumb className="text-gray-600">
+//       <Breadcrumb.Item>
+//         <Link to="/">
+//           <HomeOutlined />
+//           <span className="ml-2">Home</span>
+//         </Link>
+//       </Breadcrumb.Item>
+//       {pathnames.map((pathname, index) => {
+//         const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
+//         const isLast = index === pathnames.length - 1;
+//         return (
+//           <Breadcrumb.Item key={index}>
+//             {isLast ? (
+//               <span>{getBreadcrumbName(pathname)}</span>
+//             ) : (
+//               <Link to={routeTo}>
+//                 <LaptopOutlined />
+//                 <span className="ml-2">{getBreadcrumbName(pathname)}</span>
+//               </Link>
+//             )}
+//           </Breadcrumb.Item>
+//         );
+//       })}
+//     </Breadcrumb>
+//   );
+// };
 
-export default BreadCrumbs;
-
-
+// export default BreadCrumbs;
 
 // API INTEGRATED BREADCRUMB
 
@@ -55,7 +53,7 @@ export default BreadCrumbs;
 // const BreadCrumbs = () => {
 //   const [categories, setCategories] = useState([]);
 //   const [subCategories, setSubCategories] = useState([]);
-  
+
 //   useEffect(() => {
 //     const fetchCategories = async () => {
 //       // Simulate fetching from an API
@@ -65,10 +63,10 @@ export default BreadCrumbs;
 //       const subCategoryData = await fetchSubCategoriesAPI();
 //       setSubCategories(subCategoryData);
 //     };
-    
+
 //     fetchCategories();
 //   }, []);
-  
+
 //   const fetchCategoriesAPI = async () => {
 //     // Simulated API response
 //     return [
@@ -131,30 +129,30 @@ export default BreadCrumbs;
 
 // export default BreadCrumbs;
 
+import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
+const BreadCrumbs = ({className}) => {
+  // const pathnames = window.location.pathname.split("/").filter((x) => x);
 
+  return (
+    <div>
+      <div className={`flex items-center md:gap-1 gap-[2px] text-xs text-black capitalize ${className}`}>
+        <span>Home</span> <IoIosArrowForward className="text-[#0156FF] text-[8px]"/>{" "}
+        {window.location.pathname.split("/")[1]}{" "}
+        {window.location.pathname.split("/")[2]}
+      </div>
+      {/* <div className="flex items-center md:gap-1 gap-[2px] md:text-xs text-[9px] text-[#767676] capitalize">
+        <span className="">Home</span>
+        {pathnames.map((pathname, index) => (
+          <React.Fragment key={index}>
+            <IoIosArrowForward className="text-[#0156FF]" />
+            <span className="text-xs text-black">{pathname}</span>
+          </React.Fragment>
+        ))}
+      </div> */}
+    </div>
+  );
+};
 
-
-
-// import React from 'react';
-// import { IoIosArrowForward } from 'react-icons/io';
-
-// const BreadCrumbs = () => {
-//   const pathnames = window.location.pathname.split('/').filter((x) => x);
-
-//   return (
-//     <div>
-//       <div className='flex items-center md:gap-1 gap-[2px] md:text-xs text-[9px] text-[#767676] capitalize'>
-//         <span>Home</span>
-//         {pathnames.map((pathname, index) => (
-//           <React.Fragment key={index}>
-//             <IoIosArrowForward />
-//             <span>{pathname}</span>
-//           </React.Fragment>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BreadCrumbs;
+export default BreadCrumbs;

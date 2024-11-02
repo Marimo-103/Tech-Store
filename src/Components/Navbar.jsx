@@ -137,7 +137,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="bg-[#0156FF] lg:bg-transparent">
+    <div className="bg-[#0156FF] lg:bg-transparent border-b border-[#CACDD8]">
       <Header />
       <Container className="lg:py-3 py-[13px]">
         <div className="main flex items-center">

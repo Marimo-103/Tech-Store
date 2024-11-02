@@ -4,8 +4,10 @@ import { HiChevronDown } from "react-icons/hi";
 import Logo from "../Layers/Logo";
 import { IoLogoFacebook } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  let navigate = useNavigate()
   return (
     <div className="bg-[#020202] ">
       <Container className="py-3 flex justify-between relative">
@@ -20,7 +22,7 @@ const Header = () => {
           <span className="text-[#A2A6B0] lg:inline-block hidden mr-1">
             Visit our showroom in 1234 Street Adress City Address, 1234
           </span>{" "}
-          <span className='relative after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:rounded-full after:z-20 after:w-[105%] lg:after:h-[2px] after:h-[1.2px] after:bg-[#FFF]'>
+          <span onClick={()=> navigate('/contact/us')} className='relative after:content-[""] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:rounded-full after:z-20 after:w-[105%] lg:after:h-[2px] after:h-[1.2px] after:bg-[#FFF] cursor-pointer'>
             Contact Us
           </span>
         </p>

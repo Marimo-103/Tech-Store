@@ -25,6 +25,23 @@ const ProductInside = () => {
         </Container>
       </section>
 
+      {/* further details slider */}
+      <section
+        id="details02"
+        className="lg:pt-[165px] lg:pb-[152px] md:pt-[58px] md:pb-[70px] pt-[230px] pb-8 lg:bg-i7D md:bg-i7T bg-i7M bg-cover bg-center"
+      >
+        <Container>
+          <div className="max-w-[326px] lg:max-w-[436px] md:p-0 pl-[13px] md:ml-[50px] lg:ml-[15%]">
+            <Heading text="Outplay the Competittion" />
+            <InfoText
+              text="Experience a 40% boost in computing from last generation. MSI Desktop equips the 10th Gen. Intel® Core™ i7 processor with the upmost computing power to bring you an unparalleled gaming experience."
+              className="lg:mt-10 mt-3 mb-2 lg:mb-4"
+            />
+            <InfoText text="*Performance compared to i7-9700. Specs varies by model." />
+          </div>
+        </Container>
+      </section>
+
       {/* Customer support */}
       <section
         id="CSupport"
@@ -32,19 +49,19 @@ const ProductInside = () => {
       >
         <Container>
           <div className="flex flex-col w-[243px] lg:w-[347px] gap-[14px] lg:gap-5 md:ml-[50px] lg:ml-[15%]">
-            <div className="flex items-center justify-between lg:pl-[26px] lg:pr-5 lg:py-4 pl-[18px] pr-[22px] py-[11px] rounded-[6px] border border-[#CACDD8] w-full">
+            <div className="flex items-center justify-between lg:pl-[26px] lg:pr-5 lg:py-4 pl-[18px] pr-[22px] py-[11px] rounded-[6px] border border-[#CACDD8] w-full cursor-pointer">
               <p className="lg:text-base text-xs text-[#313131] font-medium">
                 Product Support
               </p>
               <BsArrowDownRight className="-rotate-45 lg:text-lg text-sm text-[#0156FF]" />
             </div>
-            <div className="flex items-center justify-between lg:pl-[26px] lg:pr-5 lg:py-4 pl-[18px] pr-[22px] py-[11px] rounded-[6px] border border-[#CACDD8] w-full">
+            <div className="flex items-center justify-between lg:pl-[26px] lg:pr-5 lg:py-4 pl-[18px] pr-[22px] py-[11px] rounded-[6px] border border-[#CACDD8] w-full cursor-pointer">
               <p className="lg:text-base text-xs text-[#313131] font-medium">
                 Product Support
               </p>
               <BsArrowDownRight className="-rotate-45 lg:text-lg text-sm text-[#0156FF]" />
             </div>
-            <div className="flex items-center justify-between lg:pl-[26px] lg:pr-5 lg:py-4 pl-[18px] pr-[22px] py-[11px] rounded-[6px] border border-[#CACDD8] w-full">
+            <div className="flex items-center justify-between lg:pl-[26px] lg:pr-5 lg:py-4 pl-[18px] pr-[22px] py-[11px] rounded-[6px] border border-[#CACDD8] w-full cursor-pointer">
               <p className="lg:text-base text-xs text-[#313131] font-medium">
                 Product Support
               </p>
@@ -113,7 +130,7 @@ const ProductInside = () => {
       </section>
 
       {/* support */}
-      <section id="support">
+      <section id="support" className="bg-[#F5F9FF]">
         <div className="support max-w-[1160px] mx-auto lg:pt-[60px] lg:pb-11 md:py-[37.5px] py-[25px] lg:px-[53px] flex md:flex-row flex-col md:justify-between justify-center items-center gap-y-5">
           <div className="child flex flex-col items-center gap-y-2 lg:w-[265px] md:w-[229px] w-[265px]">
             <div className="img w-[45px] h-[46px] lg:w-[65px] lg:h-[65px]">
