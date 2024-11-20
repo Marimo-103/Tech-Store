@@ -11,16 +11,19 @@ import feature04 from "/Common Images/features-4.png";
 import Heading from "../Layers/Heading";
 import InfoText from "../Layers/InfoText";
 import { BsArrowDownRight } from "react-icons/bs";
+import ProductDescriptionShowCase from "../Layers/ProductDescriptionShowCase";
 
 const ProductInside = () => {
   return (
     <div>
       <section>
         <Container className="!max-w-[1920px] flex md:flex-row-reverse flex-col">
-          <div className="imageSlider md:w-[45.68%] bg-slate-200 py-20">2</div>
-          <div className="text md:w-[55.42%] bg-slate-300 py-20">
-            <div className="head py-8 bg-red-300">1</div>
-            <div className="content py-14 bg-[#F5F7FF] lg:ml-[35.63%]"></div>
+          <div className="imageSlider md:w-[45.68%] bg-slate-200 flex flex-col md:flex-col-reverse ">
+            <div className="head py-8 bg-red-400">slider</div>
+            <div className="head lg:py-10 bg-red-300">head</div>
+          </div>
+          <div className="text md:w-[55.42%] bg-slate-300">
+            <ProductDescriptionShowCase />
           </div>
         </Container>
       </section>
