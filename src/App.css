@@ -6,4 +6,10 @@
     @apply text-white lg:text-[13px] text-xs lg:leading-[140%] leading-[170%] lg:font-normal font-light
 }
 
+.productInsideLi {
+    @apply text-sm font-semibold transition-all duration-300 relative after:absolute after:top-full after:left-0 after:rounded-full after:content-[''] after:h-[2px] after:bg-[#0156FF] after:duration-300 cursor-pointer
+}
   
+.productDetailsTabLi {
+    @apply lg:text-sm md:text-xs text-black lg:leading-[171.429%] md:leading-[210%] font-light list-disc
+}

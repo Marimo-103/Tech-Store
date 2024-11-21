@@ -1,5 +1,4 @@
-import React from "react";
-import BreadCrumbs from "../Layers/BreadCrumbs";
+import React, { useState } from "react";
 import Container from "../Components/Container";
 import supp01 from "/Common Images/Support-1.png";
 import supp02 from "/Common Images/Support-2.png";
@@ -17,15 +16,7 @@ const ProductInside = () => {
   return (
     <div>
       <section>
-        <Container className="!max-w-[1920px] flex md:flex-row-reverse flex-col">
-          <div className="imageSlider md:w-[45.68%] bg-slate-200 flex flex-col md:flex-col-reverse ">
-            <div className="head py-8 bg-red-400">slider</div>
-            <div className="head lg:py-10 bg-red-300">head</div>
-          </div>
-          <div className="text md:w-[55.42%] bg-slate-300">
-            <ProductDescriptionShowCase />
-          </div>
-        </Container>
+        <ProductDescriptionShowCase />
       </section>
 
       {/* further details slider */}
