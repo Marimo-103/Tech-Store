@@ -7,9 +7,9 @@
 }
 
 .productInsideLi {
-    @apply text-sm font-semibold transition-all duration-300 relative after:absolute after:top-full after:left-0 after:rounded-full after:content-[''] after:h-[2px] after:bg-[#0156FF] after:duration-300 cursor-pointer
+    @apply md:text-sm text-xs font-semibold transition-all duration-300 relative after:absolute after:top-full md:after:translate-y-0 after:translate-y-[3px] after:left-0 after:rounded-md after:content-[''] md:after:h-[2px] after:h-[1.5px] after:bg-[#0156FF] after:duration-300 cursor-pointer
 }
   
 .productDetailsTabLi {
-    @apply lg:text-sm md:text-xs text-black lg:leading-[171.429%] md:leading-[210%] font-light list-disc
+    @apply lg:text-sm text-xs text-black lg:leading-[171.429%] md:leading-[210%] leading-[166.67%] font-light list-disc
 }

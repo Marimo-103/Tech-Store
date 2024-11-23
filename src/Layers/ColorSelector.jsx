@@ -2,7 +2,7 @@ import React from 'react';
 
 const ColorSelector = ({ colors, selectedColor, onSelectColor }) => {
   return (
-    <div className="color-selector flex space-x-4">
+    <div className="color-selector flex md:space-x-4 space-x-3">
       {colors.map((color, index) => (
         <div
           key={index}
@@ -12,7 +12,7 @@ const ColorSelector = ({ colors, selectedColor, onSelectColor }) => {
           onClick={() => onSelectColor(color)}
         >
           <div
-            className={`w-6 h-6 lg:w-8 lg:h-8 md:w-6 md:h-6 rounded-full border-2 transition-colors ${
+            className={`w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 transition-colors ${
               selectedColor === color ? 'border-[#0156FF]' : 'border-white'
             }`}
             style={{ backgroundColor: color }}
