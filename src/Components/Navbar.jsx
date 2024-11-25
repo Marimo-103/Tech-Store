@@ -100,11 +100,11 @@ const User = () => {
       >
         <div className="relative flex flex-col md:gap-[6px]">
           <div class="inline-block w-0 h-0 border-solid border-t-0 border-r-[14.5px] border-l-[14.5px] border-b-[19px] border-l-transparent border-r-transparent border-t-transparent border-b-[#ffffff] absolute top-[-36px] right-[-14px]"></div>
-          <p className="cursor-pointer">My Account</p>
-          <p className="cursor-pointer">My Wish List (0)</p>
-          <p className="cursor-pointer">Compare (0)</p>
-          <p className="cursor-pointer">Create an Account</p>
-          <p className="cursor-pointer">Sign In</p>
+          <Link to='/login' className="cursor-pointer">My Account</Link>
+          <Link to='/' className="cursor-pointer">My Wish List (0)</Link>
+          <Link to='/' className="cursor-pointer">Compare (0)</Link>
+          <Link to='/login' className="cursor-pointer">Create an Account</Link>
+          <Link to='/login' className="cursor-pointer">Sign In</Link>
         </div>
       </div>
     </div>

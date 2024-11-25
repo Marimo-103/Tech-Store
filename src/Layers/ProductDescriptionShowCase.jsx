@@ -8,14 +8,15 @@ import { Link } from "react-router-dom";
 import ColorSelector from "./ColorSelector";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import fav1 from "../../public/Products Images/Fav1.svg";
-import fav2 from "../../public/Products Images/Fav2.svg";
-import p01 from "../../public/Products Images/DetailesProduct.png";
-import p02 from "../../public/Products Images/Product-3.png";
-import p03 from "../../public/Products Images/Product-2.png";
-import sponsor from "../../public/Products Images/sponsorInSlider.png";
+import fav1 from "/Products Images/Fav1.svg";
+import fav2 from "/Products Images/Fav2.svg";
+import p01 from "/Products Images/DetailesProduct.png";
+import p02 from "/Products Images/Product-3.png";
+import p03 from "/Products Images/Product-2.png";
+import sponsor from "/Products Images/sponsorInSlider.png";
 
 function SimpleSlider() {
+  let [active, setActive] = useState(0);
   const settings = {
     arrows: false,
     dots: true,
@@ -23,12 +24,87 @@ function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (item, index) => {
+      setActive(index);
+    },
+    appendDots: (dots) => (
+      <div
+        style={{
+          position: "absolute",
+          top: "100%",
+          transform: "translateY(25px)",
+          right: "0",
+        }}
+      >
+        <ul style={{ margin: "0px", display: "flex", gap: "10px" }}>
+          {" "}
+          {dots}{" "}
+        </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        className={`text-[10px] text-transparent rounded-full cursor-pointer ${
+          i == active ? "bg-[#0156FF]" : "bg-[#CACDD8]"
+        }`}
+        style={{
+          width: "12px",
+          height: "12px",
+        }}
+      >
+        0{i + 1}
+      </div>
+    ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          beforeChange: (item, index) => {
+            setActive(index);
+          },
+          appendDots: (dots) => (
+            <div
+              style={{
+                position: "absolute",
+                bottom: "-45px",
+                transform: "translateX(50%)",
+                left: "50%",
+              }}
+            >
+              <ul style={{ margin: "0px", display: "flex", gap: "10px" }}>
+                {" "}
+                {dots}{" "}
+              </ul>
+            </div>
+          ),
+          customPaging: (i) => (
+            <div
+              className={`text-[10px] text-transparent rounded-full cursor-pointer ${
+                i == active ? "bg-[#0156FF]" : "bg-[#CACDD8]"
+              }`}
+              style={{
+                width: "10px",
+                height: "10px",
+              }}
+            >
+              0{i + 1}
+            </div>
+          ),
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: false,
+        },
+      }
+    ],
   };
   return (
     <div className="slider-container">
       <Slider {...settings}>
         <div className="!flex md:gap-x-9 lg:gap-x-14">
-          <div className="icons flex flex-col gap-y-[6.5px] md:mt-5 lg:mt-10">
+          <div className="icons flex flex-col gap-y-[6.5px] mt-3 md:mt-5 lg:mt-10">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,16 +135,20 @@ function SimpleSlider() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="image md:w-[210px] md:h-[210px] lg:w-[255px] lg:h-[444px] ">
-              <img src={p01} alt="" className="h-full w-full object-contain"/>
+            <div className="image w-[210px] h-[210px] lg:w-[255px] lg:h-[444px] ">
+              <img src={p01} alt="" className="h-full w-full object-contain" />
             </div>
-            <div className="sponsor md:h-6 md:w-[214px] lg:h-7 lg:w-[263px]">
-              <img src={sponsor} alt="" className="h-full w-full object-contain"/>
+            <div className="sponsor h-6 w-[214px] lg:h-7 lg:w-[263px]">
+              <img
+                src={sponsor}
+                alt=""
+                className="h-full w-full object-contain"
+              />
             </div>
           </div>
         </div>
         <div className="!flex md:gap-x-9 lg:gap-x-14">
-          <div className="icons flex flex-col gap-y-[6.5px] md:mt-5 lg:mt-10">
+          <div className="icons flex flex-col gap-y-[6.5px] mt-3 md:mt-5 lg:mt-10">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,16 +179,20 @@ function SimpleSlider() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="image md:w-[210px] md:h-[210px] lg:w-[255px] lg:h-[444px] ">
-              <img src={p03} alt="" className="h-full w-full object-contain"/>
+            <div className="image w-[210px] h-[210px] lg:w-[255px] lg:h-[444px] ">
+              <img src={p02} alt="" className="h-full w-full object-contain" />
             </div>
-            <div className="sponsor md:h-6 md:w-[214px] lg:h-7 lg:w-[263px]">
-              <img src={sponsor} alt="" className="h-full w-full object-contain"/>
+            <div className="sponsor h-6 w-[214px] lg:h-7 lg:w-[263px]">
+              <img
+                src={sponsor}
+                alt=""
+                className="h-full w-full object-contain"
+              />
             </div>
           </div>
         </div>
         <div className="!flex md:gap-x-9 lg:gap-x-14">
-          <div className="icons flex flex-col gap-y-[6.5px] md:mt-5 lg:mt-10">
+          <div className="icons flex flex-col gap-y-[6.5px] mt-3 md:mt-5 lg:mt-10">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,11 +223,15 @@ function SimpleSlider() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="image md:w-[210px] md:h-[210px] lg:w-[255px] lg:h-[444px] ">
-              <img src={p02} alt="" className="h-full w-full object-contain"/>
+            <div className="image w-[210px] h-[210px] lg:w-[255px] lg:h-[444px] ">
+              <img src={p03} alt="" className="h-full w-full object-contain" />
             </div>
-            <div className="sponsor md:h-6 md:w-[214px] lg:h-7 lg:w-[263px]">
-              <img src={sponsor} alt="" className="h-full w-full object-contain"/>
+            <div className="sponsor h-6 w-[214px] lg:h-7 lg:w-[263px]">
+              <img
+                src={sponsor}
+                alt=""
+                className="h-full w-full object-contain"
+              />
             </div>
           </div>
         </div>
@@ -318,7 +406,7 @@ const ProductDescriptionShowCase = () => {
               </p>
             </div>
             <div className="slider lg:w-[595px] md:w-[339px] lg:mt-[60px] lg:ml-6">
-              <div className="sliderInner md:w-[279px] md:h-[278px] lg:w-full lg:h-auto mx-auto my-auto">
+              <div className="sliderInner md:w-[279px] md:h-[278px] lg:w-full lg:h-auto md:mt-7 lg:m-0 mx-auto my-auto">
                 <SimpleSlider />
               </div>
             </div>
@@ -327,7 +415,11 @@ const ProductDescriptionShowCase = () => {
       </div>
       <div className="block md:hidden">
         <Container className="flex flex-col">
-          <div className="slider py-10 bg-red-300"></div>
+          <div className="slider pt-[6px]">
+            <div className="sliderInner w-[279px] h-[234px] mx-auto my-auto">
+              <SimpleSlider />
+            </div>
+          </div>
           <div className="tabs mt-5 mb-[10px]">
             <ul className="flex gap-[18px] items-center">
               <li
