@@ -7,8 +7,10 @@ import section_01_img from "/Common Images/About_Section_01.png";
 import section_02_img from "/Common Images/About_Section_02.png";
 import shopLogo from "/Common Images/About_Section_02_Logo.png";
 import section_03_img from "/Common Images/About_Section_03.png";
+import section_04_img from "/Common Images/About_Section_04.png";
 import loveLogo from "/Common Images/About_Section_03_Logo.png";
 import deliveryLogo from "/Common Images/About_Section_05_Logo.png";
+import starLogo from "/Common Images/About_Section_04_Logo.png";
 import section_05_img from "/Common Images/About_Section_05.png";
 import supp01 from "/Common Images/Support-1.png";
 import supp02 from "/Common Images/Support-2.png";
@@ -124,7 +126,34 @@ const About = () => {
       </section>
 
       {/* high quality */}
-      <div className="py-10"></div>
+      <section id="family" className="lg:p-0 md:pt-[59px] md:pb-[38px]">
+        <div className="flex flex-col md:flex-row lg:gap-x-[46px] md:gap-x-[22px] gap-y-2 justify-center items-center text-white">
+          <div className="image lg:h-[681px] lg:w-[870px] md:w-[308px] md:h-[308px] w-[246px] h-[174px]">
+            <img
+              src={section_04_img}
+              alt=""
+              className="w-full h-full object-center object-cover"
+            />
+          </div>
+          <div className="text lg:w-[565px] w-[326px] mb-7 md:m-0">
+            <div className="flex lg:flex-row flex-col lg:gap-6">
+              <div className="lg:w-[61px] lg:h-[50px] w-[30px] h-[30px] lg:scale-x-[1] scale-x-[-1]">
+                <img src={starLogo} alt="" className="w-full h-full" />
+              </div>
+              <h2 className="aboutPageHeadingBlack">
+                The Highest Quality of Products
+              </h2>
+            </div>
+            <p className="aboutPageParagraphBlack mt-[10px] lg:mt-8">
+              We guarantee the highest quality of the products we sell. Several
+              decades of successful operation and millions of happy customers
+              let us feel certain about that. Besides, all items we sell pass
+              thorough quality control, so no characteristics mismatch can
+              escape the eye of our professionals.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* delivery */}
       <section
@@ -170,10 +199,7 @@ const About = () => {
       </section>
 
       {/* support */}
-      <section
-        id="support"
-        className="bg-[#F5F9FF] lg:mt-[63px] md:mt-5 mt-3"
-      >
+      <section id="support" className="bg-[#F5F9FF] lg:mt-[63px] md:mt-5 mt-3">
         <div className="support max-w-[1160px] mx-auto lg:pt-[60px] lg:pb-11 md:py-[37.5px] py-[25px] lg:px-[53px] flex md:flex-row flex-col md:justify-between justify-center items-center gap-y-5">
           <div className="child flex flex-col items-center gap-y-2 lg:w-[265px] md:w-[229px] w-[265px]">
             <div className="img w-[45px] h-[46px] lg:w-[65px] lg:h-[65px]">
