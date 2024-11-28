@@ -13,13 +13,13 @@ import card_5 from "/Common Images/american-express.png";
 
 const Footer = () => {
   const information = [
-    { name: "About Us", path: "/about-us" },
+    { name: "About Us", path: "/about/us" },
     { name: "About Zip", path: "/about-zip" },
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Search", path: "/search" },
     { name: "Terms", path: "/terms" },
     { name: "Orders and Returns", path: "/orders-returns" },
-    { name: "Contact Us", path: "/contact-us" },
+    { name: "Contact Us", path: "/contact/us" },
     { name: "Advanced Search", path: "/advanced-search" },
     { name: "Newsletter Subscription", path: "/newsletter-subscription" },
   ];

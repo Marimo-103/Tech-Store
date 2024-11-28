@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Components/Container";
 import BreadCrumbs from "../Layers/BreadCrumbs";
 import Title from "../Layers/Title";
@@ -9,6 +9,13 @@ import Input from "../Layers/Input";
 import Button from "../Layers/Button";
 
 const Login = () => {
+  let [email, setEmail] = useState();
+
+  let manageEmail = (element) => {
+    setEmail(element.target.value);
+    console.log(setEmail);
+  };
+
   return (
     <div>
       <section>
@@ -27,14 +34,19 @@ const Login = () => {
                 If you have an account, sign in with your email address.
               </p>
               <div className="flex flex-col gap-[7px]">
-                <div className="flex flex-col">
+                <div className="flex flex-col relative">
                   <Input
                     label="Email"
                     labelFor="mail"
                     required="*"
                     inputType="text"
                     placeholder="Your Email"
+                    value={email}
+                    onchange={manageEmail}
                   />
+                  <p className="absolute lg:top-[20%] top-[25%] right-1 lg:text-[10px] text-[9px] tracking-wide text-[#C94D3F] md:font-medium hidden">
+                    This field is required!
+                  </p>
                 </div>
                 <div className="flex flex-col">
                   <Input

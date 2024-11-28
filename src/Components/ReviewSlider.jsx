@@ -30,7 +30,7 @@ function ReviewSlider() {
     ),
     customPaging: (i) => (
       <div
-        className={`text-[10px] text-transparent rounded-full ${
+        className={`text-[10px] text-transparent rounded-full cursor-pointer ${
           i == active
             ? "bg-[#0156FF]"
             : "bg-[#CACDD8]"

@@ -13,3 +13,15 @@
 .productDetailsTabLi {
     @apply lg:text-sm text-xs text-black lg:leading-[171.429%] md:leading-[210%] leading-[166.67%] font-light list-disc
 }
+
+.aboutPageParagraphWhite {
+    @apply lg:text-lg text-sm text-white font-light leading-[166.667%] lg:leading-[144.444%]
+}
+
+.aboutPageParagraphBlack {
+    @apply lg:text-lg text-sm text-black font-light leading-[166.667%] lg:leading-[144.444%]
+}
+
+.aboutPageHeadingBlack {
+    @apply lg:text-[44px] text-[32px] text-black font-medium leading-[132.5%]
+}
