@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Components/Container";
 import BreadCrumbs from "../Layers/BreadCrumbs";
 import Title from "../Layers/Title";
@@ -11,6 +11,8 @@ const Span = ({ text }) => {
 };
 
 const TermsConditions = () => {
+  const [sections, setSections] = useState("section_01");
+
   return (
     <div>
       <section id="heading">
@@ -23,10 +25,78 @@ const TermsConditions = () => {
       {/* body */}
       <section id="grid" className="lg:mt-[26px] md:mt-[9px] mt-[19px]">
         <Container className="flex md:flex-row-reverse flex-col md:justify-end lg:gap-x-[30px] md:gap-x-5 gap-y-4 items-start">
-          <div className="box lg:w-[327px] lg:py-[25px] lg:px-6 bg-[#F5F7FF]">
-            <ul>
+          <div className="box lg:w-[327px] md:w-[262px] w-full md:py-[25px] py-5 lg:px-6 md:px-[15.5px] pl-4 bg-[#F5F7FF]">
+            <ul className="flex flex-col lg:gap-y-4 md:gap-y-3 gap-y-2 whitespace-nowrap lg:text-sm text-xs leading-[133.333%] lg:leading-[128.571%] transition-all duration-300">
+              <li
+                onClick={() => setSections("section_01")}
+                className={`${
+                  sections === "section_01" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#Definitions&Interpretation">
+                  Definitions & Interpretation
+                </a>
+              </li>
+              <li
+                onClick={() => setSections("section_02")}
+                className={`${
+                  sections === "section_02" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#General">General</a>
+              </li>
+              <li
+                onClick={() => setSections("section_03")}
+                className={`${
+                  sections === "section_03" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#Quotations">Quotations</a>
+              </li>
+              <li
+                onClick={() => setSections("section_04")}
+                className={`${
+                  sections === "section_04" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#price&taxes">Prices / Taxes</a>
+              </li>
+              <li
+                onClick={() => setSections("section_05")}
+                className={`${
+                  sections === "section_05" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#TermsofPayment">Terms of Payment</a>
+              </li>
+              <li
+                onClick={() => setSections("section_06")}
+                className={`${
+                  sections === "section_06" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#CreditAccounts">Credit Accounts</a>
+              </li>
               <li>
-                <a href="#Definitions&Interpretation">Definitions & Interpretation</a>
+                <a href="#ChangeofOwnership">Change of Ownership</a>
+              </li>
+              <li
+                onClick={() => setSections("section_07")}
+                className={`${
+                  sections === "section_07" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#InformationontheProductssupplied">
+                  Information on the Products supplied
+                </a>
+              </li>
+              <li
+                onClick={() => setSections("section_08")}
+                className={`${
+                  sections === "section_08" ? "font-semibold" : "font-normal"
+                }`}
+              >
+                <a href="#Delivery">Delivery</a>
               </li>
             </ul>
           </div>
@@ -257,7 +327,10 @@ const TermsConditions = () => {
       </section>
 
       {/* support */}
-      <section id="support" className="bg-[#F5F9FF] lg:mt-[74px] md:mt-[61px] mt-[63px]">
+      <section
+        id="support"
+        className="bg-[#F5F9FF] lg:mt-[74px] md:mt-[61px] mt-[63px]"
+      >
         <div className="support max-w-[1160px] mx-auto lg:pt-[60px] lg:pb-11 md:py-[37.5px] py-[25px] lg:px-[53px] flex md:flex-row flex-col md:justify-between justify-center items-center gap-y-5">
           <div className="child flex flex-col items-center gap-y-2 lg:w-[265px] md:w-[229px] w-[265px]">
             <div className="img w-[45px] h-[46px] lg:w-[65px] lg:h-[65px]">

@@ -49,7 +49,7 @@ import supp03 from "/Common Images/Support-3.png";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* intro banner */}
       <section id="intro" className="">
         <Container className="">
