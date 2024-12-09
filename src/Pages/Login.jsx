@@ -17,7 +17,7 @@ const Login = () => {
   };
 
   return (
-    <div className="overflow-hidden">
+    <div>
       <section>
         <Container>
           <BreadCrumbs className="md:mt-5 mt-4" />

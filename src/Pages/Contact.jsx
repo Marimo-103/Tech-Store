@@ -10,7 +10,7 @@ import Button from "../Layers/Button";
 
 const Contact = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <section id="contact">
         <Container>
           <BreadCrumbs className="md:mt-[21px] lg:mb-[19px] md:mb-3 mt-4 mb-[10px]" />

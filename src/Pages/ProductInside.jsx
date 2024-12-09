@@ -14,7 +14,7 @@ import ProductDescriptionShowCase from "../Layers/ProductDescriptionShowCase";
 
 const ProductInside = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <section>
         <ProductDescriptionShowCase />
       </section>
