@@ -17,7 +17,7 @@ const Footer = () => {
     { name: "About Zip", path: "/about-zip" },
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Search", path: "/search" },
-    { name: "Terms", path: "/terms" },
+    { name: "Terms", path: "/terms/&/conditions" },
     { name: "Orders and Returns", path: "/orders-returns" },
     { name: "Contact Us", path: "/contact/us" },
     { name: "Advanced Search", path: "/advanced-search" },

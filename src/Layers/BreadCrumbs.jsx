@@ -132,15 +132,19 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
-const BreadCrumbs = ({className}) => {
+const BreadCrumbs = ({ className }) => {
   // const pathnames = window.location.pathname.split("/").filter((x) => x);
 
   return (
     <div>
-      <div className={`flex items-center md:gap-1 gap-[2px] text-xs text-black capitalize ${className}`}>
-        <span>Home</span> <IoIosArrowForward className="text-[#0156FF] text-[8px]"/>{" "}
+      <div
+        className={`flex items-center md:gap-1 gap-[2px] text-xs text-black capitalize ${className}`}
+      >
+        <span>Home</span>{" "}
+        <IoIosArrowForward className="text-[#0156FF] text-[8px]" />{" "}
         {window.location.pathname.split("/")[1]}{" "}
-        {window.location.pathname.split("/")[2]}
+        {window.location.pathname.split("/")[2]}{" "}
+        {window.location.pathname.split("/")[3]}
       </div>
       {/* <div className="flex items-center md:gap-1 gap-[2px] md:text-xs text-[9px] text-[#767676] capitalize">
         <span className="">Home</span>

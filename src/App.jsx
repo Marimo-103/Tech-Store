@@ -11,6 +11,7 @@ import ProductInside from "./Pages/ProductInside";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import About from "./Pages/About";
+import TermsConditions from "./Pages/TermsConditions";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="/contact/us" element={<Contact />} />
       <Route path="/about/us" element={<About />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/terms/&/conditions" element={<TermsConditions />} />
     </Route>
   )
 );
